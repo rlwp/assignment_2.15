@@ -44,8 +44,8 @@ This is for assignnent 2.5
 
 •	Use the following Python code to retrieve the secret from Secrets Manager:
 
-
 import boto3
+
 
 def retrieve_secret(secret_id):
 
@@ -54,13 +54,15 @@ def retrieve_secret(secret_id):
     response = client.get_secret_value(SecretId=secret_id)
     
     return response['SecretString']
-
+    
 
 secret_id = 'your-secret-id'
 
 secret = retrieve_secret(secret_id)
 
-print
+print(secret)
+
+
 
 
 -	Derive the IAM policy (i.e. JSON)?
