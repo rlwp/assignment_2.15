@@ -25,7 +25,7 @@ This is for assignnent 2.5
 
 •	Click on the "Create role" button.
 
-**2.** Attach the IAM Role to Your EC2 Instance:
+**2. Attach the IAM Role to Your EC2 Instance:**
 
 •	Go to the EC2 Console.
 
@@ -44,8 +44,6 @@ This is for assignnent 2.5
 
 •	Use the following Python code to retrieve the secret from Secrets Manager:
 
-
-**python**
 
 import boto3
 
@@ -107,7 +105,7 @@ arn:aws:secretsmanager:<region>:<account-id>:secret:prod/cart-service/credential
 
 Replace <region> with your AWS region (e.g., us-west-1) and <account-id> with your AWS account ID (e.g., 123456789012).
 
-Example policy with Region and Account ID
+**Example policy with Region and Account ID**
 Here is the example IAM policy with placeholders replaced:
 
 {
