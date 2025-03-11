@@ -45,17 +45,23 @@ This is for assignnent 2.5
 •	Use the following Python code to retrieve the secret from Secrets Manager:
 
 
-python
-import boto3
+**python**
+_import boto3
 
 def retrieve_secret(secret_id):
+
     client = boto3.client('secretsmanager')
+    
     response = client.get_secret_value(SecretId=secret_id)
+    
     return response['SecretString']
 
+
 secret_id = 'your-secret-id'
+
 secret = retrieve_secret(secret_id)
-print
+
+print_
 
 
 -	Derive the IAM policy (i.e. JSON)?
@@ -64,18 +70,31 @@ print
 The IAM policy grants read access to the specific secret in AWS Secrets Manager. Here is the JSON representation of the policy:
 
 {
+
     "Version": "2012-10-17",
+    
     "Statement": [
+    
         {
+        
             "Effect": "Allow",
+            
             "Action": [
+            
                 "secretsmanager:GetSecretValue"
+                
             ],
+            
             "Resource": [
+            
                 "arn:aws:secretsmanager:<region>:<account-id>:secret:<secret-name>"
+                
             ]
+            
         }
+        
     ]
+    
 }
 
 
@@ -89,18 +108,33 @@ Replace <region> with your AWS region (e.g., us-west-1) and <account-id> with yo
 
 Example policy with Region and Account ID
 Here is the example IAM policy with placeholders replaced:
+
 {
+
     "Version": "2012-10-17",
+    
     "Statement": [
+    
         {
+        
             "Effect": "Allow",
+            
             "Action": [
+            
                 "secretsmanager:GetSecretValue"
+                
             ],
+            
             "Resource": [
+            
                 "arn:aws:secretsmanager:us-west-1:123456789012:secret:prod/cart-service/credentials"
+                
             ]
+            
         }
+        
     ]
+    
 }
+
 This policy allows the entity to retrieve the secret value of dev/rudyrdsdb/secret from AWS Secret Manager.
