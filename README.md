@@ -101,7 +101,7 @@ The IAM policy grants read access to the specific secret in AWS Secrets Manager.
 
 **ARN for the specific secret**
 
-Given the secret name dev/rudyrdsdb/credentials, here is the sensible ARN:
+Given the secret name prod/cart-service/credentials, here is the sensible ARN:
 
 arn:aws:secretsmanager:<region>:<account-id>:secret:prod/cart-service/credentials
 
