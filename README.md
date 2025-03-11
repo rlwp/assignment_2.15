@@ -55,7 +55,7 @@ def retrieve_secret(secret_id):
     
     return response['SecretString']
     
-
+    
 secret_id = 'your-secret-id'
 
 secret = retrieve_secret(secret_id)
