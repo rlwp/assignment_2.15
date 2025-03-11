@@ -1,10 +1,9 @@
 # assignment_2.15
 This is for assignnent 2.5
 
-Answer the following:
 -	What is needed to authorize your EC2 to retrieve secrets from the AWS Secret Manager?
 
-**1.** Create an IAM Role with Necessary Permissions:
+**1. Create an IAM Role with Necessary Permissions:**
    
 •	Go to the IAM Console.
 
@@ -39,7 +38,7 @@ Answer the following:
 •	Click on the "Update IAM role" button.
 
 
-**3.** Configure Your EC2 Instance to Retrieve Secrets:
+**3. Configure Your EC2 Instance to Retrieve Secrets:**
 
 •	Install the AWS CLI and Boto3 library if they are not already installed.
 
@@ -83,7 +82,9 @@ The IAM policy grants read access to the specific secret in AWS Secrets Manager.
 **ARN for the specific secret**
 
 Given the secret name dev/rudyrdsdb/credentials, here is the sensible ARN:
+
 arn:aws:secretsmanager:<region>:<account-id>:secret:prod/cart-service/credentials
+
 Replace <region> with your AWS region (e.g., us-west-1) and <account-id> with your AWS account ID (e.g., 123456789012).
 
 Example policy with Region and Account ID
