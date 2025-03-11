@@ -138,4 +138,4 @@ Here is the example IAM policy with placeholders replaced:
     
 }
 
-This policy allows the entity to retrieve the secret value of dev/rudyrdsdb/secret from AWS Secret Manager.
+This policy allows the entity to retrieve the secret value of prod/cart-service/credentials from AWS Secret Manager.
