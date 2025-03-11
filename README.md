@@ -46,7 +46,7 @@ This is for assignnent 2.5
 
 
 **python**
-_
+
 import boto3
 
 def retrieve_secret(secret_id):
@@ -63,7 +63,6 @@ secret_id = 'your-secret-id'
 secret = retrieve_secret(secret_id)
 
 print
-_
 
 
 -	Derive the IAM policy (i.e. JSON)?
